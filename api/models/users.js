@@ -20,23 +20,23 @@ module.exports = function (sequelize, DataTypes) {
       },
       password: {
         type: DataTypes.TEXT,
-        allowNull: true,
+        allowNull: false,
       },
       phone: {
         type: DataTypes.STRING(250),
-        allowNull: false,
+        allowNull: true,
       },
       address: {
         type: DataTypes.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       county: {
         type: DataTypes.STRING(255),
-        allowNull: false,
+        allowNull: true,
       },
       account_number: {
         type: DataTypes.STRING(255),
-        allowNull: false,
+        allowNull: true,
       },
       role: {
         type: DataTypes.STRING(50),
