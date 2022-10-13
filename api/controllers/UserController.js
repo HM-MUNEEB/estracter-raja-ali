@@ -85,6 +85,11 @@ const register = async function (req, res) {
       name: req.body.name,
       email: req.body.email,
       password: hash,
+      role: "user",
+      address: req.body.address,
+      phone: req.body.phone,
+      county: req.body.county,
+      account_number: req.body.account_number,
     });
     return res
       .json({
