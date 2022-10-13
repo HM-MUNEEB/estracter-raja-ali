@@ -59,8 +59,11 @@ const LoginPage = ({ isLoggedIn, setisLoggedIn, user }) => {
   return (
     <div className="container">
       <div className="form-group">
-        <div className="wrapper">
+        <div className="wrapper" style={{ marginTop: "2rem" }}>
           <h1>Sign In</h1>
+          <div>
+            Don't have an account? <Link to={"/register"}>Sign Up</Link>
+          </div>
         </div>
 
         <Form onSubmit={handleSubmit(onSubmit)}>

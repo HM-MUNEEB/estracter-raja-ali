@@ -24,6 +24,10 @@ const RegisterPage = () => {
             name: data.name,
             email: data.email,
             password: data.password,
+            address: data.address,
+            phone: data.phone,
+            county: data.county,
+            account_number: data.account_number,
           }),
           headers: {
             "content-type": "application/json",
@@ -73,6 +77,78 @@ const RegisterPage = () => {
               })}
             />
             <small>{errors?.name?.message}</small>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="address">
+            <Form.Label>
+              Address: <sup>*</sup>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              autoComplete="off"
+              placeholder="xyz"
+              {...register("address", {
+                required: "This field is required",
+                minLength: {
+                  value: 3,
+                  message: "Adress should be atleast 3 characters",
+                },
+              })}
+            />
+            <small>{errors?.address?.message}</small>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="phone">
+            <Form.Label>
+              Phone: <sup>*</sup>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              autoComplete="off"
+              placeholder=""
+              {...register("phone", {
+                required: "This field is required",
+                minLength: {
+                  value: 3,
+                  message: "Phone should be atleast 3 characters",
+                },
+              })}
+            />
+            <small>{errors?.phone?.message}</small>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="county">
+            <Form.Label>
+              county: <sup>*</sup>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              autoComplete="off"
+              placeholder=""
+              {...register("county", {
+                required: "This field is required",
+                minLength: {
+                  value: 3,
+                  message: "county should be atleast 3 characters",
+                },
+              })}
+            />
+            <small>{errors?.country?.message}</small>
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="account_number">
+            <Form.Label>
+              account_number: <sup>*</sup>
+            </Form.Label>
+            <Form.Control
+              type="text"
+              autoComplete="off"
+              placeholder=""
+              {...register("account_number", {
+                required: "This field is required",
+                minLength: {
+                  value: 3,
+                  message: "account_number should be atleast 3 characters",
+                },
+              })}
+            />
+            <small>{errors?.account_number?.message}</small>
           </Form.Group>
           <Form.Group className="mb-3" controlId="emailAddress">
             <Form.Label>
