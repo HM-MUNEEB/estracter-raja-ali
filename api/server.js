@@ -2,14 +2,14 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const showRoute = require("./middlewares/showRoutes");
-const PORT = 3541;
+const PORT = process.env.PORT || 3000;
 const whiteList = require("./middlewares/WhiteListOrigins");
 const { connectDatabase } = require("./middlewares/connection");
 const path = require("path");
 //middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "../dist")));
+// app.use(express.static(path.join(__dirname, "../dist")));
 let corsOptions = {
   origin: async function (origin, callback) {
     console.log(origin);
