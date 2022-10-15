@@ -217,7 +217,7 @@ const addUser = async (req, res) => {
     console.log(result.id);
   } catch (err) {
     return res.status(500).json({
-      error: err?.errors[0]?.message,
+      error: err.message,
     });
   }
   try {
