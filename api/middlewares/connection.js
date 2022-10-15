@@ -1,8 +1,13 @@
 const { Sequelize } = require("sequelize");
-const sequelize = new Sequelize("servicex", "root", "123456", {
-  host: process.env.HOST,
-  dialect: "mysql",
-});
+const sequelize = new Sequelize(
+  "munyedzo_servicex",
+  "munyedzo_root",
+  "munyyb1234",
+  {
+    host: process.env.HOST,
+    dialect: "mysql",
+  }
+);
 
 async function connectDatabase(req, res, next) {
   try {
